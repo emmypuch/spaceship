@@ -162,8 +162,8 @@ div.btn {
   }
 
   div.lost-space {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 10px;
+    padding-right: 5px;
   }
 
   div.lost-space p {
@@ -192,6 +192,8 @@ div.btn {
     justify-content: center;
     align-items: center;
     padding-right: 0;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   div.lost-space-image img {
