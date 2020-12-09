@@ -1,0 +1,284 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #14273d;
+  font-family: "Open Sans", sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+div.logo {
+  font-size: 1.6rem;
+  margin: 0.5rem;
+  color: white;
+}
+
+.navbar-links ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar-links li {
+  list-style: none;
+}
+
+.navbar-links li a {
+  color: white;
+  display: block;
+  padding: 1rem;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.navbar-links li:hover {
+  background: #4475e2;
+  border-radius: 3px;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+  .toggle-button {
+    display: flex;
+  }
+
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar-links li {
+    text-align: center;
+  }
+
+  .navbar-links li a {
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+}
+
+/* Section Grid-container Styling */
+
+section.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding-top: 100px;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+div.lost-space {
+  padding-left: 50px;
+}
+
+div.lost-space h2 {
+  color: white;
+  font-size: 3rem;
+  padding-bottom: 6px;
+}
+
+div#white-line {
+  height: 2px;
+  width: 85px;
+  background-color: white;
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+
+p.paragraph {
+  position: relative;
+  animation-name: paragraph;
+  animation-duration: 3s;
+  amination-fill-mode: forwards;
+}
+
+@keyframes paragraph {
+  0% {
+    left: -1000px;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+div.lost-space p {
+  color: #ececec;
+  font-size: 1.5rem;
+  letter-spacing: 0.1px;
+}
+
+div.btn {
+  padding-top: 30px;
+}
+
+button.btn1 {
+  background-color: #4475e2;
+  padding: 15px 40px;
+  border-radius: 50px;
+  outline-color: #132d4d;
+  border: none;
+  color: white;
+  font-size: 1.3rem;
+  margin-right: 15px;
+  cursor: pointer;
+  opacity: 0;
+  animation-name: btn1;
+  animation-duration: 3s;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+
+  transition-property: transform;
+  transition-duration: 1s;
+}
+
+@keyframes btn1 {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+button.btn1:hover {
+  transform: rotateY(180deg);
+}
+
+button.btn2 {
+  padding: 15px 60px;
+  border-radius: 50px;
+  outline-color: #132d4d;
+  border: 2px solid #4475e2;
+  color: #4475e2;
+  font-size: 1.3rem;
+  cursor: pointer;
+  background: transparent;
+  opacity: 0;
+  animation-name: btn2;
+  animation-duration: 3s;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+
+  transition-property: transform;
+  transition-duration: 1s;
+}
+
+button.btn2:hover {
+  transform: rotateY(180deg);
+}
+
+@keyframes btn2 {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+div.lost-space-image {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 50px;
+}
+
+div.lost-space-image img {
+  width: 450px;
+  height: 350px;
+}
+
+@media (max-width: 600px) {
+  div.lost-space-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  section.grid-container {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* Section space-social Styling */
+
+section.space-social {
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 130px;
+  padding-left: 40px;
+}
+
+div.icons i {
+  color: #ececec;
+  margin: 8px;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #17375b;
+}
+
+@media (max-width: 400px) {
+  section.space-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+  }
+
+  button.btn2 {
+    margin-top: 10px;
+  }
+}
