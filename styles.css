@@ -161,6 +161,11 @@ div.btn {
     padding-top: 20px;
   }
 
+  div.lost-space {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
   div.lost-space p {
     font-size: 1.3rem;
   }
@@ -178,7 +183,20 @@ div.btn {
     justify-content: center;
     align-items: center;
     padding-left: 0;
+    padding-right: 0;
     padding-bottom: 20px;
+  }
+
+  div.lost-space-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 0;
+  }
+
+  div.lost-space-image img {
+    width: 360px;
+    height: 300px;
   }
 }
 
@@ -260,20 +278,6 @@ div.lost-space-image img {
   height: 350px;
 }
 
-@media (max-width: 600px) {
-  div.lost-space-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-right: 0;
-  }
-
-  div.lost-space-image img {
-    width: 360px;
-    height: 300px;
-  }
-}
-
 @media (max-width: 768px) {
   section.grid-container {
     display: flex;
@@ -294,9 +298,9 @@ section.space-social {
 
 div.icons i {
   color: #ececec;
-  margin: 8px;
+  margin: 5px;
   font-size: 1.2rem;
-  padding: 10px 20px;
+  padding: 5px 10px;
   border-radius: 5px;
   background-color: #17375b;
 }
